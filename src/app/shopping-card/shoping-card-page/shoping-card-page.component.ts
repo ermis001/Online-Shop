@@ -10,6 +10,11 @@ export class ShopingCardPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
+
+
 }
+
+

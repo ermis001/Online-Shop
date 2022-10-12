@@ -1,0 +1,61 @@
+.footer{
+    /* how to position footer */
+    overflow: hidden;
+    position: sticky;
+    top:100%;
+    bottom:0px;
+    margin-bottom:0px;
+    background-color: rgb(12, 12, 12);
+}
+h1{
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    font-style:italic
+}
+
+/* to position items of col-4 in the center  */
+.col-lg-4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+a{
+    color:white;
+    text-decoration: none;
+    padding:0px 6px;    
+}
+a:hover{
+    color:rgb(180, 180, 242)
+}
+/* to posiiton items of col-2 */
+.col-lg-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+i{
+    color:rgb(180, 180, 242);
+    padding:10px
+}
+
+.form-group{
+    margin-bottom: 50px;
+}
+
+.btn{
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
+.form-control{
+    display:inline-block
+}
+
+.div1{
+    height:2px
+}
+
+.container{
+    height:10px
+}

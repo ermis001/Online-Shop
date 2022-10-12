@@ -12,6 +12,7 @@ import { ShopingCheckoutComponent } from './shoping-checkout/shoping-checkout.co
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[ShopingCardPageComponent, ShopingCheckoutComponent]
 })
 export class ShoppingCardModule { }

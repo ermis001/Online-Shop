@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutProductComponent } from './about-product/about-product.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
+import { SharedModule } from './shared/shared.module';
+import { ShoppingCardModule } from './shopping-card/shopping-card.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    ShoppingCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
