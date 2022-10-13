@@ -1,0 +1,33 @@
+ng-container{
+    overflow: hidden;
+    
+}
+
+.card{
+    background-color: #F5F7FF;
+}
+
+img{
+    width:100px
+}
+
+.btn{
+    border-radius: 50%;
+}
+.imcard{
+    width:50px
+}
+.title{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+}
+td, p, span{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+}
