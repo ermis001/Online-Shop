@@ -1,23 +1,30 @@
 <div class="product-list">
+   
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-12">
+                <h3>Product List</h3>
                 <div class="card">
+                   
                     <div class="card-header">
-                        <h4>Product List
-                            <button type="button" class="btn btn-sm btn-outline-primary">Add Product</button>
-                            <button type="button" class="btn btn-sm btn-primary">Add Category</button>
-                        </h4>
+                     
+                        <div class="header-buttons">
+                           
+                            <button id="addProduct" type="button" class="btn btn-sm btn-primary">Add Product</button>
+                            <button id="addCategory" type="button" class="btn btn-sm btn-primary">Add Category</button>
+                        </div>
+                        
+                       
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered ">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    <th >ID</th>
                                     <th>Product Name</th>
                                     <th>Category</th>
                                     <th>Price</th>
-                                    <th>Action</th>
+                                    <th class="col col-lg-1">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -25,20 +32,50 @@
                                     <td>1</td>
                                     <td>Pants</td>
                                     <td>Clothing</td>
-                                    <td>12.99</td>
+                                    <td>12.99 $</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary btn-sm btn-success">View</button>
-                                        <button type="button" class="btn btn-primary btn-sm btn-warning">Edit</button>
-                                        <button type="button" class="btn btn-primary btn-sm btn-danger">Delete</button>
+                                        
+                                        <button id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
+                                        <button id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>T-shirt</td>
+                                    <td>Men Clothing</td>
+                                    <td>16.99 $</td>
+                                    <td>
+                                        
+                                        <button id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
+                                        <button id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Shoes</td>
+                                    <td>Men's Sports Wears</td>
+                                    <td>13.99 $</td>
+                                    <td>
+                                        
+                                        <button id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
+                                        <button id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                                    </td>
+                                </tr>
+                        
                             </tbody>
+                        
                         </table>
+                   
                     </div>
+                
                 </div>
+           
             </div>
+        
         </div>
+      
     </div>
+  
 </div>
                             
 
