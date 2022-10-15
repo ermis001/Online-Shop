@@ -15,18 +15,12 @@ import { CategoryListComponent } from './Admin-Interference/category-list/catego
 @NgModule({
   declarations: [
     AppComponent,
-    AboutProductComponent,
-    AboutUsComponent,
-    ProductListComponent,
-    ProductDetailsComponent,
-    CategoryListComponent
+  
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    ShoppingCardModule,
-    ShoppingModule,
     SdaHttpClientModule
   ],
   providers: [],
