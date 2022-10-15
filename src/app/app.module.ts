@@ -7,6 +7,9 @@ import { AboutProductComponent } from './about-product/about-product.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SharedModule } from './shared/shared.module';
 import { ShoppingCardModule } from './shopping-card/shopping-card.module';
+import { ShoppingModule } from './shopping/shopping.module';
+import { SdaHttpClientModule } from './data-layer/sda-be-mock.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +20,9 @@ import { ShoppingCardModule } from './shopping-card/shopping-card.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    ShoppingCardModule
+    ShoppingCardModule,
+    ShoppingModule,
+    SdaHttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
