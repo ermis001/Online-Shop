@@ -8,6 +8,6 @@ export interface ProductInterface {
     productRating: number;
     productCategory: string;
 
-
-
 }
+
+
