@@ -7,19 +7,18 @@ import { AboutProductComponent } from './User-Interference/about-product/about-p
 import { AboutUsComponent } from './User-Interference/about-us/about-us.component';
 import { SharedModule } from './shared/shared.module';
 import { ShoppingCardModule } from './shopping-card/shopping-card.module';
+import { SdaHttpClientModule } from './data-layer/sda-be-mock.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutProductComponent,
-    AboutUsComponent,
+  
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    ShoppingCardModule,
+    SdaHttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
