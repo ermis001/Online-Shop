@@ -8,6 +8,7 @@ import { ShopingPageComponent } from './shoping-page/shoping-page.component';
   declarations: [
     ShopingPageComponent
   ],
+  exports: [ShopingPageComponent],
   imports: [
     CommonModule
   ]

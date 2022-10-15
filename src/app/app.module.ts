@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutProductComponent } from './about-product/about-product.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ShoppingModule } from './shopping/shopping.module';
+import { SdaHttpClientModule } from './data-layer/sda-be-mock.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ShoppingModule,
+    SdaHttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
