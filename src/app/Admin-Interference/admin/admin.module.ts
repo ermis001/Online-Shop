@@ -21,9 +21,14 @@ import { CategoryListComponent } from '../category-list/category-list.component'
     CommonModule,
     RouterModule.forChild([
       {
-        path:'app-product-list',component:ProductListComponent
+        path:'app-product-list',component:ProductListComponent,
+      },
+      {
+        path:'product-details',component:ProductDetailsComponent
       }
     ])
   ]
 })
+        
+        
 export class AdminModule { }
