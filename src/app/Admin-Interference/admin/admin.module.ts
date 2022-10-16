@@ -25,10 +25,12 @@ import { ReactiveFormsModule } from '@angular/forms';
         path:'app-product-list',component:ProductListComponent
       },
       {
-        path: 'product-details',
-        component: ProductDetailsComponent,
+        path: 'product-details',component: ProductDetailsComponent,
+        
       },
     ])
   ]
 })
+        
+        
 export class AdminModule { }
