@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './User-Interference/home/home.component';
-import { ProductListComponent } from './Admin-Interference/product-list/product-list.component';
 import { UserLayoutComponent } from './User-Interference/user-layout/user-layout.component';
 
 const routes: Routes = [
