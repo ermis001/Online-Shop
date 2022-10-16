@@ -8,7 +8,6 @@ import { ProductDetailsComponent } from '../product-details/product-details.comp
 import { CategoryListComponent } from '../category-list/category-list.component';
 
 
-
 @NgModule({
   declarations: [
     AdminLayoutComponent,

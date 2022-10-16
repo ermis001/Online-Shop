@@ -1,24 +1,22 @@
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-12">
+            <div class="myContainer">
                 <h3>Product List</h3>
                 <div class="card">
                     <div class="card-header">
                         <div class="header-buttons">
-                            <button id="addProduct" type="button" class="btn btn-sm btn-primary">Add Product</button>
-                            <button id="addCategory" type="button" class="btn btn-sm btn-primary">Add Category</button>
+                            <button id="addProduct" type="button" class="btn btn-sm btn-dark">Add Product</button>
+                            <button id="addCategory" type="button" class="btn btn-sm btn-dark">Add Category</button>
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered ">
-                            <thead>
+                        <table class="table table-bordered text-center">
+                            <thead class="table-dark">
                                 <tr>
                                     <th >ID</th>
                                     <th>Product Name</th>
                                     <th>Category</th>
                                     <th>Price</th>
-                                    <th class="col col-lg-1">Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,11 +32,12 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div>
+                            <app-category-list></app-category-list>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
           
    
                      
