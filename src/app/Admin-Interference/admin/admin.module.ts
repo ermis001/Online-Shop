@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { CategoryListComponent } from '../category-list/category-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,13 +19,15 @@ import { CategoryListComponent } from '../category-list/category-list.component'
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {
-        path:'app-product-list',component:ProductListComponent,
+        path:'app-product-list',component:ProductListComponent
       },
       {
-        path:'product-details',component:ProductDetailsComponent
-      }
+        path: 'product-details',
+        component: ProductDetailsComponent,
+      },
     ])
   ]
 })

@@ -1,43 +1,92 @@
-<div class="container">
-  <div class="row">
-    <div class="col d-flex justify-content-center">
-<form>
-    <div class="mb-3 text-center">
-      <label for="id" class="form-label">Product Id</label>
-      <input type="number" class="form-control" id="id" aria-describedby="id">
-    </div>
-    <div class="mb-3 text-center">
-      <label for="categoryId" class="form-label">Category Id</label>
-      <input type="number" class="form-control" id="categoryId">
-    </div>
-    <div class="mb-3 text-center">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name">
-      </div>
-      <div class="mb-3 text-center">
-        <label for="image" class="form-label">Image</label>
-        <input type="text" class="form-control" id="image">
-      </div>
-      <div class="form-floating text-center">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">Description</label>
-      </div>
-      <div class="mb-3 text-center">
-        <label for="price" class="form-label">Price</label>
-        <input type="number" class="form-control" id="price">
-      </div>
-      <div class="mb-3 text-center">
-        <label for="productRating" class="form-label">Product Rating</label>
-        <input type="number" class="form-control" id="productRating">
-      </div>
-      <div class="mb-3 text-center">
-        <label for="productCategory" class="form-label">Product Category</label>
-        <input type="text" class="form-control" id="productCategory">
+<div class="jumbotron jumbotron-fluid ">
+  <div class="container ">
+    <form [formGroup]="productForm">
+      <h1 class="display-5 text-center mt-5">Add a new Product</h1>
+      <div class="row form-group mt-4">
+        <div class="col"></div>
+        <div class="col-sm-3 ">
+
+          <label>Categories id</label>
+          <select  [ngClass]="{
+            'is-invalid':
+              productForm.get('categoryId').status == 'INVALID' &&
+              productForm.get('categoryId').touched
+          }"class="form-select" aria-label="Default select example" formControlName="categoryId">
+            <option value="1">Bags</option>
+            <option value="2">Hats</option>
+            <option value="3">Hoodies</option>
+            <option value="4">Pants</option>
+            <option value="5">Sneakers</option>
+            <option value="6">T-shirts</option>
+          </select>
+        
+        
+          <label>Name</label>
+          <input [ngClass]="{
+            'is-invalid':
+              productForm.get('name').status == 'INVALID' &&
+              productForm.get('name').touched
+          }"
+            formControlName="name"
+            type="text"
+            class="form-control"
+          />
+   
+    
+          <label>Image</label>
+          <input  [ngClass]="{
+            'is-invalid':
+              productForm.get('image').status == 'INVALID' &&
+              productForm.get('image').touched
+          }"
+            formControlName="image"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-3 ">
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea [ngClass]="{
+              'is-invalid':
+                productForm.get('description').status == 'INVALID' &&
+                productForm.get('description').touched
+            }"formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+          </div>
+       
+          <label>Price</label>
+          <input [ngClass]="{
+            'is-invalid':
+              productForm.get('price').status == 'INVALID' &&
+              productForm.get('price').touched
+          }"
+            formControlName="price"
+            type="number"
+            class="form-control"
+            min = "0"
+          />
+       </div>
+        <div class="col"></div>
       </div>
 
-    <button type="submit" class="btn btn-primary mt-4 mx-4">Add a new product</button>
-  </form>
-</div>
+      <div class="row">
+        <div class="col-sm-12 d-flex justify-content-center mt-5">
+          <button
+            
+            class="btn btn-dark float-right mx-3"
+            (click)="add()">
+            Add
+          </button>
+          <button
+          class="btn btn-outline-dark float-right">
+          Cancel
+        </button>
+        
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
-</div>
+
