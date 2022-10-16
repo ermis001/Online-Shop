@@ -13,15 +13,15 @@ export class ProductDetailsComponent implements OnInit {
   productForm!:FormGroup
   ngOnInit(): void {
 
-    this.productForm= new FormGroup({
-      categoryId: new FormControl ('', Validators.required),
-      name: new FormControl ('', Validators.required),
-      image: new FormControl ('', Validators.required),
-      description: new FormControl ('', Validators.required),
-      price: new FormControl ('', Validators.required)
-    })
-      
-    
+    this.productForm = new FormGroup(
+      {
+        categoryId: new FormControl('', Validators.required),
+        name: new FormControl('', Validators.required),
+        image: new FormControl('', Validators.required),
+        description: new FormControl('', Validators.required),
+        price: new FormControl('', Validators.required)
+      }
+    ) 
   }
 
   add(){
