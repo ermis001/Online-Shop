@@ -1,22 +1,17 @@
 .myContainer{
   width: 98%;
   margin: 0 1%;
+  display: grid;
+  grid-template-columns: 78% 21%;
 }
 .card{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.card-body{
-  display: grid;
-  grid-template-columns: 78% 21%;
-}
+
 .table{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.header-buttons {
-  height: 31px;
-  width: 300px;
-}
 
 #addCategory {
   margin: 0 0 0 30px;
