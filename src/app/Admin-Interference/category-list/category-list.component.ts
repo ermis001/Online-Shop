@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators} from '@angular/forms'
+import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-category-list',
@@ -16,9 +16,9 @@ export class CategoryListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.categoryFormGroup= this.builder.group(
+    this.categoryFormGroup= new FormGroup(
       {
-        name: [null, Validators.required]
+        name: new FormControl([null, Validators.required])
       }
     ) 
   }
