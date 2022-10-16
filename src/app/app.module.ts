@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
-import { AboutProductComponent } from './User-Interference/about-product/about-product.component';
-import { AboutUsComponent } from './User-Interference/about-us/about-us.component';
-import { SharedModule } from './shared/shared.module';
-import { ShoppingCardModule } from './shopping-card/shopping-card.module';
 import { SdaHttpClientModule } from './data-layer/sda-be-mock.module';
+import { ProductListService } from './services/product-list.service';
+import { ProductDetailsService } from './services/product-details.service';
+import { CategoryListService } from './services/category-list.service';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { SdaHttpClientModule } from './data-layer/sda-be-mock.module';
     SdaHttpClientModule
    
   ],
-  providers: [],
+  providers: [ProductListService,ProductDetailsService,CategoryListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
