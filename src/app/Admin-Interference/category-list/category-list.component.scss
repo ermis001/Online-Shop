@@ -5,3 +5,11 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     margin-left: 10px;
 }
+.category-form-container{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    h3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

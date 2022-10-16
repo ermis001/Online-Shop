@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnInit {
+  categoryButtonToInput:boolean = true;
+  editButtonToInput:boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  buttonTriger (triger: boolean){
+    return !triger;
   }
 
 }
