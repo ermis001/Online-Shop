@@ -1,8 +1,68 @@
-<div class="product-list">
-    <table>
-        <th>
-            <tr>ID</tr>
-            <tr>Product</tr>
-        </th>
-    </table>
-</div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Product List</h3>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="header-buttons">
+                            <button id="addProduct" type="button" class="btn btn-sm btn-primary">Add Product</button>
+                            <button id="addCategory" type="button" class="btn btn-sm btn-primary">Add Category</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered ">
+                            <thead>
+                                <tr>
+                                    <th >ID</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th class="col col-lg-1">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let value of data">
+                                    <td>{{value.id}}</td>
+                                    <td>{{value.name}}</td>
+                                    <td>{{value.category}}</td>
+                                    <td>{{value.price | currency:'USD'}}</td>
+                                    <td >
+                                        <button id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
+                                        <button id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+          
+   
+                     
+                                        
+                           
+                        
+                       
+                               
+                        
+                        
+                   
+                
+           
+  
+        
+      
+                            
+
+
+
+
+
+
+
+
+
+
