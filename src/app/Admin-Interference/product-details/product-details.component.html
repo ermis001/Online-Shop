@@ -9,8 +9,8 @@
           <label>Categories id</label>
           <select  [ngClass]="{
             'is-invalid':
-              productForm.get('categoryId').status == 'INVALID' &&
-              productForm.get('categoryId').touched
+              productForm.get('categoryId')?.status == 'INVALID' &&
+              productForm.get('categoryId')?.touched
           }"class="form-select" aria-label="Default select example" formControlName="categoryId">
             <option value="1">Bags</option>
             <option value="2">Hats</option>
@@ -24,8 +24,8 @@
           <label>Name</label>
           <input [ngClass]="{
             'is-invalid':
-              productForm.get('name').status == 'INVALID' &&
-              productForm.get('name').touched
+              productForm.get('name')?.status == 'INVALID' &&
+              productForm.get('name')?.touched
           }"
             formControlName="name"
             type="text"
@@ -36,8 +36,8 @@
           <label>Image</label>
           <input  [ngClass]="{
             'is-invalid':
-              productForm.get('image').status == 'INVALID' &&
-              productForm.get('image').touched
+              productForm.get('image')?.status == 'INVALID' &&
+              productForm.get('image')?.touched
           }"
             formControlName="image"
             type="text"
@@ -50,16 +50,16 @@
             <label for="exampleFormControlTextarea1">Description</label>
             <textarea [ngClass]="{
               'is-invalid':
-                productForm.get('description').status == 'INVALID' &&
-                productForm.get('description').touched
+                productForm.get('description')?.status == 'INVALID' &&
+                productForm.get('description')?.touched
             }"formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
           </div>
        
           <label>Price</label>
           <input [ngClass]="{
             'is-invalid':
-              productForm.get('price').status == 'INVALID' &&
-              productForm.get('price').touched
+              productForm.get('price')?.status == 'INVALID' &&
+              productForm.get('price')?.touched
           }"
             formControlName="price"
             type="number"

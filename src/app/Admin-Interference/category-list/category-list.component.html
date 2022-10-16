@@ -33,10 +33,16 @@
                     <td >
                         <div *ngIf="editButtonToInput; else editInput">Cimi</div>
                         <ng-template #editInput>
-                             <!-- <input class="editInput form-control" type="text"> -->
                              <div class="input-group">
-                                <input type="text" class="form-control" placeholder="..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <button class="btn btn-outline-dark" type="button" id="button-addon2">+</button>
+                                <form [formGroup]="categoryFormGroup">
+                                    <input type="text" class="form-control" placeholder="..." [ngClass]="{
+                                        'is-invalid':
+                                          categoryFormGroup.get('name')?.status == 'INVALID' &&
+                                          categoryFormGroup.get('name')?.touched
+                                      }"
+                                        formControlName="name">
+                                    <button class="btn btn-outline-dark" type="button" id="button-addon2">+</button>
+                                </form>
                               </div>
                         </ng-template>
                     </td>
