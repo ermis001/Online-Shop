@@ -7,11 +7,11 @@
         <div class="col-sm-3 ">
 
           <label>Categories id</label>
-          <select  [ngClass]="{
+          <select [ngClass]="{
             'is-invalid':
               productForm.get('categoryId')?.status == 'INVALID' &&
               productForm.get('categoryId')?.touched
-          }"class="form-select" aria-label="Default select example" formControlName="categoryId">
+          }" class="form-select" aria-label="Default select example" formControlName="categoryId">
             <option value="1">Bags</option>
             <option value="2">Hats</option>
             <option value="3">Hoodies</option>
@@ -19,30 +19,22 @@
             <option value="5">Sneakers</option>
             <option value="6">T-shirts</option>
           </select>
-        
-        
+
+
           <label>Name</label>
           <input [ngClass]="{
             'is-invalid':
               productForm.get('name')?.status == 'INVALID' &&
               productForm.get('name')?.touched
-          }"
-            formControlName="name"
-            type="text"
-            class="form-control"
-          />
-   
-    
+          }" formControlName="name" type="text" class="form-control" />
+
+
           <label>Image</label>
-          <input  [ngClass]="{
+          <input [ngClass]="{
             'is-invalid':
               productForm.get('image')?.status == 'INVALID' &&
               productForm.get('image')?.touched
-          }"
-            formControlName="image"
-            type="text"
-            class="form-control"
-          />
+          }" formControlName="image" type="text" class="form-control" />
         </div>
         <div class="col-sm-3 ">
 
@@ -52,41 +44,34 @@
               'is-invalid':
                 productForm.get('description')?.status == 'INVALID' &&
                 productForm.get('description')?.touched
-            }"formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            }" formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
           </div>
-       
+
           <label>Price</label>
           <input [ngClass]="{
             'is-invalid':
               productForm.get('price')?.status == 'INVALID' &&
               productForm.get('price')?.touched
-          }"
-            formControlName="price"
-            type="number"
-            class="form-control"
-            min = "0"
-          />
-       </div>
+          }" formControlName="price" type="number" class="form-control" min="0" />
+        </div>
         <div class="col"></div>
       </div>
 
       <div class="row">
         <div class="col-sm-12 d-flex justify-content-center mt-5">
-          <button
-            
-            class="btn btn-dark float-right mx-3"
-            (click)="add()">
+          <button *ngIf="idOfProduct===0" class="btn btn-dark float-right mx-3" (click)="addProduct()">
             Add
           </button>
-          <button
-          class="btn btn-outline-dark float-right">
-          Cancel
-        </button>
-        
+          <button *ngIf="idOfProduct!==0"  (click)="updateProduct()" class="btn btn-dark float-right mx-3" >
+
+            Update
+          </button>
+          <button routerLink="/admin/app-product-list" class="btn btn-outline-dark float-right">
+            Cancel
+          </button>
+
         </div>
       </div>
     </form>
   </div>
 </div>
-
-

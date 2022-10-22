@@ -4,7 +4,7 @@
                     <div class="card-header">
                         <div class="text-center">
                             <h3>Product List</h3>
-                            <a class="add-product"  routerLink="/admin/product-details">Add Product</a>
+                           <button class="btn btn-dark float-right mx-3"  routerLink="/admin/product-details/0">Add Product</button>
                         </div>
                     </div>
                     <div class="card-body">
@@ -19,14 +19,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let value of data">
+                                <tr *ngFor="let value of productTable">
                                     <td>{{value.id}}</td>
                                     <td>{{value.name}}</td>
                                     <td>{{value.category}}</td>
                                     <td>{{value.price | currency:'USD'}}</td>
                                     <td >
-                                        <button id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
-                                        <button id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                                        <button  [routerLink]="['/admin/product-details',value.id]" id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
+                                        <button (click)="deleteProduct(value.id)" id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
                                     </td>
                                 </tr>
                             </tbody>

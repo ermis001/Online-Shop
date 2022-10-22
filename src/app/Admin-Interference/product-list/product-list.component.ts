@@ -1,23 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ProductService } from 'src/app/services/product.service';
+
+
+
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  data:any[]=[
-    {id:1,name:'Pants',category:'Clothing',price:12.99 },
-    {id:2,name:'T-shirt',category:'Men Clothing',price:16.99},
-    {id:3,name:'Shoes',category:'Mens Sports Wears',price:13.99},
-    {id:1,name:'Pants',category:'Clothing',price:12.99 },
-    {id:2,name:'T-shirt',category:'Men Clothing',price:16.99},
-    {id:3,name:'Shoes',category:'Mens Sports Wears',price:13.99},
-  ]
+  data:any;
+  productTable:any;
+
    
-  constructor() { }
+  constructor(private getProd:ProductService) {
+    
+    
+   }
 
   ngOnInit(): void {
+    this.getProduct()
+   
+    
   }
 
+ 
+ getProduct(){
+  this.getProd.getProduct().subscribe((result) => {
+    this.productTable = result
+ 
+    
+  })
+}
+
+  deleteProduct(id:number){
+    this.getProd.deleteProduct(id).subscribe(() => {
+      this.getProduct()
+
+    })
+  }
+  
+
+
+
+ 
 }
