@@ -21,12 +21,10 @@ export class ProductDetailsComponent implements OnInit {
     this.reactiveFormProduct();
     this.idOfProduct = +this.route.snapshot.params['id'];
     this.getProductById();
-    console.log(this.idOfProduct);
-    console.log(typeof this.idOfProduct);
-    console.log(this.productForm);
-    
-    
   }
+
+    
+    
   
   productForm!: FormGroup;
 

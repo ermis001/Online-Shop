@@ -59,7 +59,7 @@
 
       <div class="row">
         <div class="col-sm-12 d-flex justify-content-center mt-5">
-          <button *ngIf="idOfProduct===0" class="btn btn-dark float-right mx-3" (click)="addProduct()">
+          <button [disabled]="productForm.invalid" *ngIf="idOfProduct===0" class="btn btn-dark float-right mx-3" (click)="addProduct()">
             Add
           </button>
           <button *ngIf="idOfProduct!==0"  (click)="updateProduct()" class="btn btn-dark float-right mx-3" >
@@ -67,7 +67,7 @@
             Update
           </button>
           <button routerLink="/admin/app-product-list" class="btn btn-outline-dark float-right">
-            Cancel
+            Back
           </button>
 
         </div>
