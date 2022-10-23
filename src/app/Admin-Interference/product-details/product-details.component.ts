@@ -4,6 +4,7 @@ import { ProductService } from 'src/app/services/product.service';
 
 import { ActivatedRoute } from '@angular/router';
 import { __values } from 'tslib';
+import { CategoryService } from 'src/app/services/category.service';
 
 
 @Component({
@@ -12,21 +13,24 @@ import { __values } from 'tslib';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  constructor( private route: ActivatedRoute, private productService: ProductService) {}
+  constructor(private categoryService:CategoryService, private route: ActivatedRoute, private productService: ProductService) {}
 
   idOfProduct: any;
-  addBoolean:boolean = true
+  categoriesTable:any;
+  productForm!: FormGroup;
+
 
   ngOnInit(): void {
     this.reactiveFormProduct();
     this.idOfProduct = +this.route.snapshot.params['id'];
     this.getProductById();
+    this.getCategories()
   }
 
     
     
   
-  productForm!: FormGroup;
+ 
 
 
   reactiveFormProduct() {
@@ -58,6 +62,15 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.updateProduct(this.idOfProduct, formData).subscribe(() => {});
     
   }
+
+
+    
+  getCategories(){
+    this.categoryService.getCategory().subscribe((result) => {
+       this.categoriesTable = result
+    })
+ }
+ 
 
   
 }

@@ -22,7 +22,7 @@
                                 <tr *ngFor="let value of productTable">
                                     <td>{{value.id}}</td>
                                     <td>{{value.name}}</td>
-                                    <td>{{value.category}}</td>
+                                    <td>{{value.categoryId}}</td>
                                     <td>{{value.price | currency:'USD'}}</td>
                                     <td >
                                         <button  [routerLink]="['/admin/product-details',value.id]" id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
