@@ -10,20 +10,20 @@ export class ProductListComponent implements OnInit {
   data: any;
   productTable: any;
 
-  constructor(private getProd: ProductService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.getProduct();
   }
 
   getProduct() {
-    this.getProd.getProduct().subscribe((result) => {
+    this.productService.getProducts().subscribe((result) => {
       this.productTable = result;
     });
   }
 
   deleteProduct(id: number) {
-    this.getProd.deleteProduct(id).subscribe(() => {
+    this.productService.deleteProduct(id).subscribe(() => {
       this.getProduct();
     });
   }

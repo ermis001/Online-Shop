@@ -18,7 +18,7 @@ export class CategoryListComponent implements OnInit {
 
     this.categoryFormGroup= new FormGroup(
       {
-        name: new FormControl([null, Validators.required])
+        name: new FormControl('', Validators.required)
       }
     ) 
   }

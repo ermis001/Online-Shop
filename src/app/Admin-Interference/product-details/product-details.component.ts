@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from 'src/app/services/product.service';
 
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { __values } from 'tslib';
 
 
@@ -12,7 +12,7 @@ import { __values } from 'tslib';
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  constructor(private router:Router, private route: ActivatedRoute, private addProd: ProductService) {}
+  constructor( private route: ActivatedRoute, private productService: ProductService) {}
 
   idOfProduct: any;
   addBoolean:boolean = true
@@ -43,19 +43,19 @@ export class ProductDetailsComponent implements OnInit {
   addProduct() {
     this.productForm.markAllAsTouched();
     let formData = this.productForm.value;
-    this.addProd.addProduct(formData).subscribe(() => {});
+    this.productService.addProduct(formData).subscribe(() => {});
  
   }
 
   getProductById() {
-    this.addProd.getProductById(this.idOfProduct).subscribe((result) => {
+    this.productService.getProductById(this.idOfProduct).subscribe((result) => {
       this.productForm.setValue(result);
     });
   }
 
   updateProduct() {
     let formData = this.productForm.value;
-    this.addProd.updateProduct(this.idOfProduct, formData).subscribe(() => {});
+    this.productService.updateProduct(this.idOfProduct, formData).subscribe(() => {});
     
   }
 

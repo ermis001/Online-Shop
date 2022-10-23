@@ -1,7 +1,8 @@
 <div class="jumbotron jumbotron-fluid ">
   <div class="container ">
     <form [formGroup]="productForm">
-      <h1 class="display-5 text-center mt-5">Add a new Product</h1>
+      <h1 *ngIf="idOfProduct===0; else update"   class="display-5 text-center mt-5">Add a new Product</h1>
+      <ng-template #update><h1  class="display-5 text-center mt-5">Update Product</h1></ng-template>
       <div class="row form-group mt-4">
         <div class="col"></div>
         <div class="col-sm-3 ">
