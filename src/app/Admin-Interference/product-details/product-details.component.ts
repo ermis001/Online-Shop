@@ -6,32 +6,28 @@ import { ActivatedRoute } from '@angular/router';
 import { __values } from 'tslib';
 import { CategoryService } from 'src/app/services/category.service';
 
-
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-  constructor(private categoryService:CategoryService, private route: ActivatedRoute, private productService: ProductService) {}
+  constructor(
+    private categoryService: CategoryService,
+    private route: ActivatedRoute,
+    private productService: ProductService
+  ) {}
 
   idOfProduct: any;
-  categoriesTable:any;
+  categoriesTable: any;
   productForm!: FormGroup;
-
 
   ngOnInit(): void {
     this.reactiveFormProduct();
     this.idOfProduct = +this.route.snapshot.params['id'];
     this.getProductById();
-    this.getCategories()
+    this.getCategories();
   }
-
-    
-    
-  
- 
-
 
   reactiveFormProduct() {
     this.productForm = new FormGroup({
@@ -48,7 +44,6 @@ export class ProductDetailsComponent implements OnInit {
     this.productForm.markAllAsTouched();
     let formData = this.productForm.value;
     this.productService.addProduct(formData).subscribe(() => {});
- 
   }
 
   getProductById() {
@@ -59,18 +54,14 @@ export class ProductDetailsComponent implements OnInit {
 
   updateProduct() {
     let formData = this.productForm.value;
-    this.productService.updateProduct(this.idOfProduct, formData).subscribe(() => {});
-    
+    this.productService
+      .updateProduct(this.idOfProduct, formData)
+      .subscribe(() => {});
   }
 
-
-    
-  getCategories(){
+  getCategories() {
     this.categoryService.getCategory().subscribe((result) => {
-       this.categoriesTable = result
-    })
- }
- 
-
-  
+      this.categoriesTable = result;
+    });
+  }
 }
