@@ -1,58 +1,46 @@
-<div class="card">
-    <div class="card-header">
-        <div class="text-center category-form-container">
-            <h3>Category List</h3>
-            <div *ngIf="categoryButtonToInput; else elseBlock">
-                <button 
-                id="addCategory" 
-                type="button" 
-                class="btn btn-sm btn-dark"
-                (click)="categoryButtonToInput=!categoryButtonToInput">Add Category</button>
-            </div>
-            <ng-template #elseBlock>
-                <input 
-                class="form-control"
-                type="text" 
-                placeholder="Category Name..."
-                ><button class="btn btn-dark">+</button>
+<div class="jumbotron jumbotron-fluid ">
+    <div class="container ">
+        <form [formGroup]="categoryFormGroup">
+            <h1 *ngIf="idOfCategory===0; else update" class="display-5 text-center mt-5">Add a new Category</h1>
+            <ng-template #update>
+                <h1 class="display-5 text-center mt-5">Update Category</h1>
             </ng-template>
+            <div class="row form-group mt-4">
+                <div class="col"></div>
+                <div class="col-sm-3 ">
+                    <label>Category Name</label>
+                    <input [ngClass]="{
+                        'is-invalid':
+                        categoryFormGroup.get('name')?.status == 'INVALID' &&
+                        categoryFormGroup.get('name')?.touched
+                      }" formControlName="name" type="text" class="form-control" />
+                    </div>
+    
+                    <div class="col"></div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-sm-12 d-flex justify-content-center mt-5">
+                        <button [disabled]="categoryFormGroup.invalid" *ngIf=" idOfCategory===0" (click)="addCategory()"
+                            class="btn btn-dark float-right mx-3">
+                            Add
+                        </button>
+                        <button *ngIf="idOfCategory!==0" (click)="updateCategory()" class="btn btn-dark float-right mx-3">
+    
+                            Update
+                        </button>
+                        <button routerLink="/admin/app-product-list" class="btn btn-outline-dark float-right">
+                            Back
+                        </button>
+    
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="card-body">
-        <table class="table table-bordered text-center">
-            <thead class="table-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td >
-                        <div *ngIf="editButtonToInput; else editInput">Cimi</div>
-                        <ng-template #editInput>
-                             <div class="input-group">
-                                <form [formGroup]="categoryFormGroup">
-                                    <input type="text" class="form-control" placeholder="..." [ngClass]="{
-                                        'is-invalid':
-                                          categoryFormGroup.get('name')?.status == 'INVALID' &&
-                                          categoryFormGroup.get('name')?.touched
-                                      }"
-                                        formControlName="name">
-                                    <button class="btn btn-outline-dark" type="button" id="button-addon2">+</button>
-                                </form>
-                              </div>
-                        </ng-template>
-                    </td>
-                    <td>
-                        <button (click)="editButtonToInput = !editButtonToInput" id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
-                        <button id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
-                    </td>
-                </tr>                
-            </tbody>
-        </table>
-    </div>
-</div>
+
+
+
+
+
 

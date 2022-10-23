@@ -1,5 +1,6 @@
-
+              
             <div class="myContainer mt-3">
+                 <!-- Product list starts-->
                 <div class="card">
                     <div class="card-header">
                         <div class="text-center">
@@ -33,8 +34,46 @@
                         </table>  
                     </div>
                 </div>
+                <!-- Product list ends-->
                 <div>
-                    <app-category-list></app-category-list>
+                <!-- Category list starts-->
+                    <div class="category-list">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="text-center">
+                                    <h3>Category List</h3>
+                                   <button routerLink='/admin/category-details/0' class="btn btn-dark float-right mx-3" >Add Category</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered text-center">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th >ID</th>
+                                            <th>Name</th>
+                                            <th>Action</th>
+                                          
+                                        </tr>
+                                    </thead>
+                                    <tbody class="category-body">
+                                        <tr *ngFor="let category of categoriesTable">
+                                            <td>{{category.id}}</td>
+                                            <td>{{category.name}}</td>
+                                            
+                                            <td >
+                                                <button [routerLink]="['/admin/category-details',category.id]" id="editBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 0px;" ><i class="fa-solid fa-pen-to-square" style="color: rgb(0, 202, 17);"></i></button>
+                                                <button (click)="deleteCategory(category.id)" id="deleteBtn" type="button" style="background-color: white; border: none;margin: 0 0px 0 9px;" ><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>  
+                            </div>
+                        </div>
+                        <div>
+                           
+                        </div>
+                    </div>
+                    <!-- Category list ends-->
                 </div>
             </div>
           

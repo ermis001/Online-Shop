@@ -13,12 +13,7 @@
               productForm.get('categoryId')?.status == 'INVALID' &&
               productForm.get('categoryId')?.touched
           }" class="form-select" aria-label="Default select example" formControlName="categoryId">
-            <option value="1">Bags</option>
-            <option value="2">Hats</option>
-            <option value="3">Hoodies</option>
-            <option value="4">Pants</option>
-            <option value="5">Sneakers</option>
-            <option value="6">T-shirts</option>
+            <option *ngFor="let category of categoriesTable" value="{{category.name}}">{{category.name}}</option>
           </select>
 
 
