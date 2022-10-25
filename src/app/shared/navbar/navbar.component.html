@@ -1,55 +1,67 @@
 <div class="container-fluid" style="background-color: black;">
     <div class="row text-white ">
         <div class="col d-flex justify-content-center">
-          <small>Mon-Fri 9:00AM- 15:00PM</small>
+          <small><i class="fa fa-clock"></i> Mon-Fri 9:00AM-15:00PM</small>
         </div>
         <div class="col d-flex justify-content-center">
-         <small>Visit our shop, Tirana Albania <a class="link1" href="#">Contact us</a> </small> 
+         <small> <i class="fa fa-location-dot"></i> Tirana Albania</small> 
+        
         </div>
         <div class="col d-flex justify-content-center">
-          <small>Call us:847754 </small>
+          <small><a class="link1" href="#">About Us</a></small>
         </div> 
       </div>
 </div>
 
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid ">
-    <a class="navbar-brand " href="https://mdbootstrap.com/docs/standard/navigation/footer/">LOGO</a>
+    <img class="navphoto" src="/assets/new.png">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mx-auto mb-2 ">
         <li class="nav-item">
           <a class="nav-link active " aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Porduct List</a>
+          <a class="nav-link " href="#">Product List</a>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link  " href="#" >
-            Sm else
-          </a>
-        </li>
+        <!-- <li class="nav-item ">
+          <a class="nav-link  " href="#" >Sm else </a>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link " href="#">About Us</a>
+          <a class="nav-link">
+            <div routerLink="cart" class="cart" >
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            <!-- <div style="font-size: 14px;" class="bagde bg-danger">{{1}}</div> -->
+            </div></a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control mx-5" type="text" formControlName="form1" placeholder="search product... ">
-        <div routerLink="cart" class="cart mx-4">
-          <i class="fa fa-cart-plus" aria-hidden="true"></i>
-        <div style="font-size: 14px;" class="bagde bg-danger">{{1}}</div>
-        </div>
+      <form class="d-flex justify-content-end" >
+        <div *ngIf="bool; else elseBlock">
+          <button 
+          id="addCategory" 
+          type="button" 
+          class="btn btn-sm btn-dark "
+          (click)="bool=!bool"><i class="fa fa-search"></i></button>
+      </div>
+      <ng-template #elseBlock>
+          <input 
+          class="form-control"
+          type="text" 
+          placeholder="Search product...">
+      </ng-template>
       
       </form>
         
     </div>
   </div>
 </nav>
+<div class=" div1 text-center" style="background-color: rgba(81, 79, 79, 0.2); height: 1px;"></div>
 
 
-<div id="demo" class="carousel slide d-block mx-auto mb-3 w-25 " data-bs-ride="carousel">
+<div id="demo" class="carousel slide d-block mx-auto my-3 w-25 " data-bs-ride="carousel">
   <div class="carousel-inner ">
     <div class="carousel-item active">
       <img src="https://cdn.vox-cdn.com/thumbor/TqHoHenoCEVFkgBZEcuVDcasKhc=/0x0:3000x2000/1220x813/filters:focal(1260x760:1740x1240):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/57455039/GettyImages_612894574.0.jpg" alt="Los Angeles" class="d-block" style="width:100%">

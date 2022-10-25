@@ -13,6 +13,8 @@ export class NavbarComponent implements OnInit {
   employeeForm:any = FormGroup;
 
 
+  bool:Boolean=true
+
   ngOnInit(): void {
     
   }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ShopingCardPageComponent } from './shopping-card/shoping-card-page/shoping-card-page.component';
 import { UserLayoutComponent } from './User-Interference/user-layout/user-layout.component';
 
 const routes: Routes = [
@@ -22,7 +23,7 @@ const routes: Routes = [
       import('./Admin-Interference/admin/admin.module').then(
         (m) => m.AdminModule
       ),
-  },
+  }
 ];
 
 @NgModule({
