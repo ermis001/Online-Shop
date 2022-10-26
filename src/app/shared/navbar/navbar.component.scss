@@ -1,48 +1,23 @@
+.container-fluid{
+  height:40px;
+}
 i{
   cursor: pointer;
 }
-
 .navphoto{
-  width:70px
+  width:60px
 }
-
-ul{
-
-  right:50%
-}
-
-.link1{
-  text-decoration: none;
-  color:white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.fa-search{
-  border-radius: 15px;
- 
-}
-
 .fa-cart-plus{
-  color:rgb(9, 9, 9);
-  // position:absolute;
-  // right:1%;
   font-size: 20px;
-
 }
-
-.bagde{
-  color:white;
-  position:absolute;
-  right:5%;
-  font-size: 30px;
-
+a{
+  font-size:18px;
+  color:black
 }
-
-.carousel {
-  width:640px;
+.navbar-nav .nav-link.active-link{
+  color:red;
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration:underline
 }
-
-
-
 

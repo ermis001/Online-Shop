@@ -1,0 +1,53 @@
+.banner{
+    background-image: url(../../../assets/hero4.png);
+    height:650px;
+    background-position: center top;
+    background-size:cover
+}
+.bannerFirst{
+    top:30%;
+    left:20%;
+    position:absolute;
+}
+
+.bannerFirst a{
+    background-color:Black;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    font-style:italic ;
+    padding:10px 15px;
+    border-radius: 5px;
+}
+.bannerFirst a:hover{
+    background-color: rgb(170, 167, 167);
+    color:black
+}
+.container{
+    margin: 0px !important;
+    padding: 0px;
+    width: 100%;
+}
+
+.imag{
+    position: relative;
+    height: 400px;
+    width: auto;
+}
+.text{
+    position: absolute;
+    color: white;
+    margin-top: 170px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity .2s, visibility .2s;
+}
+.col-lg-4:hover .text{
+    visibility: visible;
+    opacity: 1;    
+}
+.col-lg-4:hover .imag{
+    border: 10px solid rgb(109, 127, 148);
+}
+
