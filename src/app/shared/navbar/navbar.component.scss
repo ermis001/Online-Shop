@@ -1,17 +1,33 @@
+i{
+  cursor: pointer;
+}
+
+.navphoto{
+  width:70px
+}
+
+ul{
+
+  right:50%
+}
 
 .link1{
   text-decoration: none;
-  color:black;
+  color:white;
   font-weight: bold;
-  font-style:italic;
   cursor: pointer;
+}
+
+.fa-search{
+  border-radius: 15px;
+ 
 }
 
 .fa-cart-plus{
   color:rgb(9, 9, 9);
-  position:absolute;
-  right:5%;
-  font-size: 30px;
+  // position:absolute;
+  // right:1%;
+  font-size: 20px;
 
 }
 
@@ -23,11 +39,8 @@
 
 }
 
-
-
 .carousel {
   width:640px;
-
 }
 
 

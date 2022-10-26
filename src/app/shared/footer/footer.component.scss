@@ -20,12 +20,12 @@ h1{
     align-items: center;
 }
 a{
-    color:white;
     text-decoration: none;
     padding:0px 6px;    
 }
+
 a:hover{
-    color:rgb(180, 180, 242)
+    color:rgb(182, 182, 202)
 }
 /* to posiiton items of col-2 */
 .col-lg-2{
@@ -35,8 +35,9 @@ a:hover{
     justify-content: flex-end;
 }
 i{
-    color:rgb(180, 180, 242);
-    padding:10px
+    color:rgb(182, 182, 216);
+    padding:10px;
+  
 }
 
 .form-group{
@@ -56,6 +57,3 @@ i{
     height:2px
 }
 
-.container{
-    height:10px
-}
