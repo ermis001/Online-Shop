@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
+
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -9,22 +11,37 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductListComponent implements OnInit {
   data: any;
   productTable: any;
+  categoriesTable:any;
 
-  constructor(private getProd: ProductService) {}
+  constructor(private categoryService:CategoryService, private productService: ProductService) {}
 
   ngOnInit(): void {
     this.getProduct();
+    this.getCategories();
   }
 
   getProduct() {
-    this.getProd.getProduct().subscribe((result) => {
+    this.productService.getProducts().subscribe((result) => {
       this.productTable = result;
     });
   }
 
+  getCategories(){
+    this.categoryService.getCategory().subscribe((result) => {
+      this.categoriesTable = result
+    })
+  }
+
   deleteProduct(id: number) {
-    this.getProd.deleteProduct(id).subscribe(() => {
+    this.productService.deleteProduct(id).subscribe(() => {
       this.getProduct();
     });
   }
+
+  deleteCategory(id: number){
+    this.categoryService.deleteCategory(id).subscribe(() => {
+      this.getCategories()
+    })
+  }
+  
 }

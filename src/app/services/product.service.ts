@@ -14,7 +14,7 @@ export class ProductService {
    return this.http.post('Product',product)
   }
   
-  getProduct():Observable<ProductInterface[]>{
+  getProducts():Observable<ProductInterface[]>{
     return this.http.getAll<ProductInterface>('Product')
   }
 
