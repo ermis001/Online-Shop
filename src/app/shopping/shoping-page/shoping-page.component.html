@@ -1,8 +1,32 @@
+<div class="container mt-1">
+  <div class="row">
+  
+    <div class="col-3">
+      <form action="">
+       
+        <select class="form-select" aria-label="Default select example" [(ngModel)]='categoriesValue'>
+          <option value="" selected >All Categories</option>
+          
+          <option *ngFor="let category of allCategories" value="{{category.name}}">{{category.name}}</option>
+        </select>
+        
+      </form>
+    </div>
+    <div class="col-1">
+      <h5>Categories</h5>
+    </div>
+  </div>
+</div>
+   
+      
+
+
+
 <div class="container">
   <div class="row">
     <div *ngFor="let product of allProducts" class="col-3 mb-3">
       <div class="card mt-3  h-100" >
-        <img class="card-img-top" [src]="product.image" alt="Card image cap" height="220px" width="60px">
+        <img class="card-img-top" [src]="product.image" alt="Card image cap" height="220px" width="50px">
         <div class="card-body">
           <p class="name">{{product.name}}</p>
           <p class="category">{{product.categoryId}}</p>
@@ -13,4 +37,5 @@
   </div>
 </div>
 
+  
 
