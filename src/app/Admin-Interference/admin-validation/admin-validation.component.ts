@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup,FormControl,Validator, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
+import { FormGroup,FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-validation',
@@ -19,8 +19,8 @@ export class AdminValidationComponent implements OnInit {
   }
   reactiveForm(){
     this.logInForm = new FormGroup({
-      username: new FormControl('',Validators.required),
-      password:new FormControl('',Validators.required)
+      username: new FormControl(''),
+      password:new FormControl('')
     })
   }
 

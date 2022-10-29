@@ -1,41 +1,35 @@
-<div class="container mt-1">
+<!--category filter starts-->
+<div class="container mt-3">
   <div class="row">
-  
-    <div class="col-3">
-      <form action="">
-       
-        <select class="form-select" aria-label="Default select example" [(ngModel)]='categoriesValue'>
-          <option value="" selected >All Categories</option>
-          
-          <option *ngFor="let category of allCategories" value="{{category.name}}">{{category.name}}</option>
-        </select>
-        
-      </form>
+    <div class="col-2">
+      <select class="form-select btn btn-secondary btn-sm " aria-label="Default select example" [(ngModel)]="categoriesValue">
+        <option value=''selected>All Categories</option>
+        <option *ngFor="let category of allCategories" value="{{category.name}}">{{category.name}}</option>
+      </select>
     </div>
-    <div class="col-1">
-      <h5>Categories</h5>
+    <div class="col-2">
+      
     </div>
   </div>
 </div>
-   
-      
+<!--category filter ends-->
 
 
-
+<!--shopping products starts-->
 <div class="container">
   <div class="row">
-    <div *ngFor="let product of allProducts" class="col-3 mb-3">
-      <div class="card mt-3  h-100" >
-        <img class="card-img-top" [src]="product.image" alt="Card image cap" height="220px" width="50px">
-        <div class="card-body">
-          <p class="name">{{product.name}}</p>
-          <p class="category">{{product.categoryId}}</p>
-          <p class="price">{{product.price| currency}}</p>
+    <ng-container *ngFor="let product of allProducts">
+      <div *ngIf="categoriesValue===''|| categoriesValue===product.categoryId " class="col-3 mb-3" >
+        <div class=" border border-5 card mt-3  h-100">
+          <img class="card-img-top" [src]="product.image" alt="Card image cap" height="230px" width="50px">
+          <div class="card-body">
+            <p class="name">{{product.name}}</p>
+            <p class="category">{{product.categoryId}}</p>
+            <p class="price">{{product.price| currency}}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 </div>
-
-  
-
+<!--shopping products ends-->
