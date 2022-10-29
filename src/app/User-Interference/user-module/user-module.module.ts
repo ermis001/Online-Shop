@@ -24,7 +24,10 @@ import { ShoppingModule } from 'src/app/shopping/shopping.module';
       {
         path:'',component:HomeComponent
       },
-      {path:'app-shoping-page',component:ShopingPageComponent}
+      {path:'app-shoping-page',component:ShopingPageComponent},
+      {
+        path:'about', component:AboutUsComponent
+      }
     ])
   ]
 })

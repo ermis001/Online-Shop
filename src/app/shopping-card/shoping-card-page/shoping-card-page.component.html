@@ -119,33 +119,20 @@
                 <div class="card border-white mb-3 mt-5 " style="max-width: 25rem;">
                     <div class="card-body">
                         <h3 class="mb-3">Summary</h3>
-                        <div class="d-flex mx-auto">
-                        <p style="font-weight:bold;">Estimate shipping and Tax </p>
-                        <button class="btn btn-sm mb-5 btn-outline-light text-black" (click)="toggleImage()">{{bol ? '<': '>'}}</button>
-                        </div>
-                        <p *ngIf="bol" style="color:gray">Enter your destination to get a shipping estimate</p>
                         <div class="d-flex mx-auto mt-3">
-                            <h5 class="card-title">Apply Discount Code</h5>
+                            <h5 class="card-title">Shoping card total</h5>
                             <button class="btn btn-sm mb-5 btn-outline-light text-black" (click)="toggleIm()">{{boll ? '<': '>'}}</button>
                         </div>
                         <div class="m-3" style="height:1px; display:block ; background-color: gray;" *ngIf="boll"></div>
                         <div class="row">
                             <div class="col">
-                                <p style="font-weight:bold" *ngIf="boll">Sutotal </p>
-                                <p style="font-weight:bold"  *ngIf="boll">Shiping </p>
-                                <p style="font-weight:bold"  *ngIf="boll">Tax</p>
-                                <p style="font-weight:bold"  *ngIf="boll">Gst</p>
                                 <p style="font-weight:bold"  *ngIf="boll"> Order Total</p>
                             </div>
                             <div class="col "></div>
                             <div class="col d-flex flex-column align-items-end"> <p style="font-weight:bold" *ngIf="boll"> {{100 | currency:'USD'}}</p>
-                                <p style="font-weight:bold"  *ngIf="boll">{{0 | currency:'USD'}}</p>
-                                <p style="font-weight:bold"  *ngIf="boll">{{0 | currency:'USD'}}</p>
-                                <p style="font-weight:bold"  *ngIf="boll">{{0 | currency:'USD'}}</p>
-                                <p style="font-weight:bold"  *ngIf="boll" style="font-size:20px; font-weight: bold;"> {{100 | currency:'USD'}}</p></div>
-
+                            </div>
                         </div>
-                        <button class="btn btn-primary d-flex mx-auto mt-5 rounded-pill">Proceed to Checkout</button>
+                        <button class="btn btn-primary d-flex mx-auto mt-5 rounded-pill" routerLink="/checkout" >Proceed to Checkout</button>
                     </div>
                     <div class="card-footer border-white">
                         <img src="https://images.livemint.com/img/2022/05/26/600x338/G_(2)_1650455177271_1653553031020.jpg" class="imcard me-1">
