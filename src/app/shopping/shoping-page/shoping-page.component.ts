@@ -13,18 +13,19 @@ export class ShopingPageComponent implements OnInit {
   constructor(private productService:ProductService, private categories:CategoryService) { }
   allProducts:any[]=[];
   allCategories:any[]=[];
-  categoriesValue!:string;
+  categoriesValue:string='';
+
   ngOnInit(): void {
     this.getProducts()
     this.getCategories()
-    console.log(this.categoriesValue);
+  
     
   }
   
   getProducts(){
     this.productService.getProducts().subscribe((result) => {
         this.allProducts=result
-  
+       
         
     } )
   }
@@ -34,6 +35,5 @@ export class ShopingPageComponent implements OnInit {
         this.allCategories= result
     })
   }
-
 
 }

@@ -1,31 +1,14 @@
 <div class="container my-3" id="login-form-wrap">
   <img src="../../../assets/kisspng-computer-icons-user-setting-icon-5ae1412577dfd6.945531711524711717491.png"
     height="150px" alt="">
-
   <form id="login-form" [formGroup]=" logInForm">
-   
-      <input type="text" id="username"  placeholder="Username" formControlName="username"
-      [ngClass]="{
-        'is-invalid':
-          logInForm.get('username')?.status == 'INVALID' &&
-          logInForm.get('username')?.touched
-      }" class="form-control">
-   
-
- 
-      <input type="password" id="password"  placeholder="Password" formControlName="password" 
-      [ngClass]="{
-        'is-invalid':
-          logInForm.get('password')?.status == 'INVALID' &&
-          logInForm.get('password')?.touched
-      }" class="form-control" >
-    
-       <h5 *ngIf="error" class="error-message" >INVALID CREDENTIAL !</h5>
-      <button (click)=" logOn()" type="submit" id="login" value="Login">Login</button>
-      <button routerLink="" id="back">Back</button>
-   
-
-  </form>
-
-</div>
+    <input type="text" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Username"
+      formControlName="username">
+    <input type="password" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Password"
+      formControlName="password">
+      <p *ngIf="error" class="error-message">INVALID CREDENTIAL !</p>
+      <button class="btn btn-success" (click)=" logOn()" type="submit" value="Login">Login</button>
+      <button class="btn btn-secondary" routerLink="">Back</button>
+    </form>
+  </div>
 
