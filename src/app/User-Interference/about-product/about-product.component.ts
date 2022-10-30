@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
+import { RatingService } from 'src/app/services/rating.service';
 
 
 @Component({
@@ -9,18 +10,14 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./about-product.component.scss']
 })
 export class AboutProductComponent implements OnInit {
-   product:any;
+  product:any;
   idOfProduct:any;
+  star:any;
 
-  oneStar:any;
-  twoStar:any;
-  threeStar:any;
-  fourStar:any;
-  fiveStar:any;
 
    
 
-  constructor(private productService:ProductService, private route:ActivatedRoute) { }
+  constructor(private productService:ProductService, private route:ActivatedRoute,private ratingService:RatingService) { }
    
   ngOnInit(): void {
    this.idOfProduct = +this.route.snapshot.params['id']
@@ -33,4 +30,12 @@ export class AboutProductComponent implements OnInit {
     this.product = result
   })
  }
+
+addRating(){
+  this.ratingService.addRating(this.star).subscribe(() => {
+    console.log(this.star);
+    
+  })
+}
+ 
 }
