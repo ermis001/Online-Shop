@@ -1,17 +1,18 @@
-
 <nav class="navbar navbar-expand navbar-light">
   <div class="container-fluid">
-      <!-- add routerLink="" -->
-      <!-- add routerLinkActive too -->
+    <!-- add routerLink="" -->
+    <!-- add routerLinkActive too -->
     <a class="navbar-brand" routerLink="" routerLinkActive="active-link"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
       <!-- ms-auto => margin start  -->
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link active mx-3" aria-current="page" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</a>
+          <a class="nav-link active mx-3" aria-current="page" routerLink="" routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact:true}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link mx-3" routerLink="app-shoping-page" routerLinkActive="active-link">Products</a>
@@ -21,7 +22,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link mx-3" routerLink="contact" routerLinkActive="active-link">
-            <div routerLink="cart" class="cart" >
+            <div routerLink="cart" class="cart">
               <i class="fa fa-cart-plus" aria-hidden="true"></i>
             </div>
           </a>
@@ -29,14 +30,11 @@
       </ul>
     </div>
     <div class="d-flex justify-end">
-      <ul class="navbar-nav" >
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link link" routerLink="/admin/admin-validation" routerLinkActive="active-link">Admin</a>
+          <a class="nav-link link" routerLink="/admin-validation" routerLinkActive="active-link">Admin</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-
