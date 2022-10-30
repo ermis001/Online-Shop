@@ -11,13 +11,19 @@ i{
   font-size: 20px;
 }
 a{
-  font-size:18px;
+  font-size:20px;
+  font-weight: 600;
   color:black
+
 }
 .navbar-nav .nav-link.active-link{
   color:red;
   font-weight: bold;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-decoration:underline
+  text-decoration:none;
+}
+.nav-items{
+  display: flex;
+  flex-direction: row;
 }
 
