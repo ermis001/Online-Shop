@@ -5,7 +5,6 @@ import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ShopingCardPageComponent } from '../shopping-card/shoping-card-page/shoping-card-page.component';
-import { HomeComponent } from '../User-Interference/home/home.component';
 
 @NgModule({
   declarations: [
