@@ -21,7 +21,7 @@
           <img class="card-img-top" [src]="product.image" alt="Card image cap" >
           <div class="card-body">
             <p class="name">{{product.name | titlecase}}</p>
-            <p class="category">{{product.categoryId}}</p>
+            <p class="category">{{product.categoryId | titlecase}}</p>
             <p class="price">{{product.price| currency}}</p>
           </div>
         </div>
