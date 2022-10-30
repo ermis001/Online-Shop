@@ -16,7 +16,7 @@ export class ProductDetailsComponent implements OnInit {
     private categoryService: CategoryService,
     private route: ActivatedRoute,
     private productService: ProductService
-  ) { }
+  ) {}
 
   idOfProduct: any;
   categoriesTable: any;
@@ -43,9 +43,7 @@ export class ProductDetailsComponent implements OnInit {
   addProduct() {
     this.productForm.markAllAsTouched();
     let formData = this.productForm.value;
-    this.productService.addProduct(formData).subscribe(() => {
-      // Add redirection here
-    });
+    this.productService.addProduct(formData).subscribe(() => {});
   }
 
   getProductById() {
@@ -58,9 +56,7 @@ export class ProductDetailsComponent implements OnInit {
     let formData = this.productForm.value;
     this.productService
       .updateProduct(this.idOfProduct, formData)
-      .subscribe(() => {
-        // Add redirection here
-      });
+      .subscribe(() => {});
   }
 
   getCategories() {

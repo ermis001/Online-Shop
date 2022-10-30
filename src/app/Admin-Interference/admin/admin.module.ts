@@ -16,22 +16,23 @@ import { AdminValidationComponent } from '../admin-validation/admin-validation.c
     ProductListComponent,
     ProductDetailsComponent,
     CategoryListComponent,
+    AdminValidationComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forChild([
-
+      {path:'admin-validation',component:AdminValidationComponent},
       {
 
         path: 'app-product-list',
         component: ProductListComponent,
       },
-
+     
       { path: 'category-details/:id', component: CategoryListComponent },
       { path: 'product-details/:id', component: ProductDetailsComponent },
     ]),
   ],
 })
-export class AdminModule { }
+export class AdminModule {}
