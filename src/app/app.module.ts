@@ -7,30 +7,19 @@ import { SdaHttpClientModule } from './data-layer/sda-be-mock.module';
 import { SdaHttpClient } from './data-layer/sda-be-mock.service';
 import { ProductService } from './services/product.service';
 import { SharedModule } from './shared/shared.module';
-
-
-
-
-
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-
-   
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SdaHttpClientModule,
     SharedModule,
-    CommonModule
-  
-   
+    CommonModule,
+    FormsModule,
   ],
-  providers: [SdaHttpClient,ProductService],
-  bootstrap: [AppComponent]
+  providers: [SdaHttpClient, ProductService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

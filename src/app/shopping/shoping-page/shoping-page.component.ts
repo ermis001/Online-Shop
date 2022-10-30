@@ -3,6 +3,7 @@ import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 
 
+
 @Component({
   selector: 'app-shoping-page',
   templateUrl: './shoping-page.component.html',
