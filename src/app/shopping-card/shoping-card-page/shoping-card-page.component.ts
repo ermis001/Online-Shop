@@ -13,12 +13,6 @@ export class ShopingCardPageComponent implements OnInit {
 
   }
 
-bol=false;
-toggleImage() {
-  this.bol= !this.bol
-}
-
-  
 boll=false;
 toggleIm() {
   this.boll= !this.boll

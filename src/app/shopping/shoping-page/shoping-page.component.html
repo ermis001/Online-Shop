@@ -1,14 +1,11 @@
 <!--category filter starts-->
 <div class="container mt-3">
-  <div class="row">
+  <div class="row d-flex justify-content-center">
     <div class="col-2">
-      <select class="form-select btn btn-secondary btn-sm " aria-label="Default select example" [(ngModel)]="categoriesValue">
+      <select class="form-select btn btn-dark btn-md " aria-label="Default select example" [(ngModel)]="categoriesValue">
         <option value=''selected>All Categories</option>
         <option *ngFor="let category of allCategories" value="{{category.name}}">{{category.name}}</option>
       </select>
-    </div>
-    <div class="col-2">
-      
     </div>
   </div>
 </div>
