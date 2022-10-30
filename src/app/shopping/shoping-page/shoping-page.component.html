@@ -17,7 +17,7 @@
   <div class="row">
     <ng-container *ngFor="let product of allProducts">
       <div *ngIf="categoriesValue===''|| categoriesValue===product.categoryId " class="col-md-4 mb-3" >
-        <div [routerLink]="['/product',product.id]"  class=" border border-5 card mt-3  h-100">
+        <div [routerLink]="['/product',product.id]"  class="card mt-3 ">
           <img class="card-img-top" [src]="product.image" alt="Card image cap" >
           <div class="card-body">
             <p class="name">{{product.name | titlecase}}</p>
