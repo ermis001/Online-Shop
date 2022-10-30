@@ -100,14 +100,14 @@
     color: #12263A;
     padding-bottom: 0.6rem;
    }
-   .product-details p {
-    font-size: 0.8rem;
+   .product-description {
+    font-size: 16px;
     padding: 0.3rem;
     opacity: 0.8;
    }
    .product-details ul {
     margin: 1rem 0;
-    font-size: 0.8rem;
+    font-size: 16px;
    }
    .product-details ul li {
     margin: 0;
@@ -127,8 +127,6 @@
    }
    .purchase-info input,
    .purchase-info .btn {
-    border: 1.5px solid #ddd;
-    border-radius: 25px;
     text-align: center;
     padding: 0.45rem 0.8rem;
     outline: 0;
@@ -143,7 +141,8 @@
     color: #fff;
    }
    .purchase-info .btn:first-of-type {
-    background: #256EFF;
+    background: #000;
+    border-radius: 0;
    }
    .purchase-info .btn:hover {
     opacity: 0.9;
@@ -151,6 +150,10 @@
    .social-links {
     display: flex;
     align-items: center;
+   }
+   .social-links p{
+    margin: 0 5px;
+    font-size: 18px;
    }
    .social-links a {
     display: flex;
@@ -173,7 +176,8 @@
     .card {
      display: grid;
      grid-template-columns: repeat(2, 1fr);
-     grid-gap: 1.5rem
+     grid-gap: 1.5rem;
+     border: none;
     }
     .card-wrapper {
      display: flex;
