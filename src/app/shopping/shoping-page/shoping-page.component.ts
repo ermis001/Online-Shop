@@ -14,8 +14,7 @@ export class ShopingPageComponent implements OnInit {
   constructor(private productService:ProductService, private categories:CategoryService) { }
   allProducts:any[]=[];
   allCategories:any[]=[];
-  categoriesValue:string='';
-
+  categoriesValue:string = this.productService.categoriesValue;
   ngOnInit(): void {
     this.getProducts()
     this.getCategories()

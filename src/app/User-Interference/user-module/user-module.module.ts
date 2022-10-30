@@ -26,7 +26,8 @@ import { FormsModule } from '@angular/forms';
         path:'',component:HomeComponent
       },
       {path:'app-shoping-page',component:ShopingPageComponent},
-      {path:'product/:id', component:AboutProductComponent}
+      {path:'product/:id', component:AboutProductComponent},
+      {path: 'about-us', component: AboutUsComponent}
     ])
   ]
 })

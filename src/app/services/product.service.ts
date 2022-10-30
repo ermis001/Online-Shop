@@ -8,6 +8,9 @@ import { ProductInterface } from '../Interfaces/product-interface';
 })
 export class ProductService {
 
+  categoriesValue:string='';
+
+
   constructor(private http:SdaHttpClient) { }
 
   addProduct(product:ProductInterface):Observable<ProductInterface>{
