@@ -7,19 +7,21 @@ import { SdaHttpClientModule } from './data-layer/sda-be-mock.module';
 import { SdaHttpClient } from './data-layer/sda-be-mock.service';
 import { ProductService } from './services/product.service';
 import { SharedModule } from './shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminValidationComponent } from './Admin-Interference/admin-validation/admin-validation.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AdminValidationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SdaHttpClientModule,
     SharedModule,
+    ReactiveFormsModule,
     CommonModule,
     FormsModule,
   ],
   providers: [SdaHttpClient, ProductService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
