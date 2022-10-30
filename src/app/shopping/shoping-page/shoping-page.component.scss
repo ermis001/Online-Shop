@@ -3,16 +3,63 @@ body{
     padding: 0;
 }
 
-.shop-header {
-    img{
-        margin-left: 10%;
+.product-container{
+    display: flex;
+    flex-direction: row;
+}
+.filter{
+    background-color: rgb(167, 168, 170);
+    width: 15%;
+    h3{
+        text-align: center;
+        margin: 10%;
+        color: white;
     }
-
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    color: white;
+    button{
+        background-color: transparent;
+        border: none;
+        color: white;
+        margin-top: 10px;
+    }
+}
+.container{
+    width: 85%;
+    margin-top: 50px;
 }
 
-.card-body{
-    display: flex;
-    width: 200px;
-    height: 330px;
-    border: 3px solid grey;
+.card{
+    border-radius: 0%;
+    border: none;
+    width: 20rem;
+    height: 32rem;
+    margin: 30px;
+    bottom: 0;
+    overflow: hidden;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: .6s ease;
+    .card-img-top{
+        border-radius: 0%;
+        width: 20rem;
+        height: 21rem;
+    }
+    .card-body{
+        text-align: center;
+    }
+    .btn{
+        border-radius: 0;
+        position: absolute;
+        left: 35%;
+        bottom: 20px;
+    }
+}
+
+.card:hover{
+    bottom: 18px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 16px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }

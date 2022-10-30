@@ -26,4 +26,6 @@ export class SdaHttpClient {
     delete(url: string, id: number): Observable<boolean> {
         return this.dbService.deleteByKey(url, id);
     }
+
+    
 }

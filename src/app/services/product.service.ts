@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { SdaHttpClient } from '../data-layer/sda-be-mock.service';
 import { ProductInterface } from '../Interfaces/product-interface';
 
+
 @Injectable({
   providedIn: 'root'
 })
